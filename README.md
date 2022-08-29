@@ -1,4 +1,4 @@
-## Your Life in Weeks
+## Inputs
 
 # UPDATE
 We've moved away from repl.it for coding exercises.
@@ -10,54 +10,44 @@ Login to your Udemy course and head over to the link below to get the sign up li
 
 # Instructions
 
-I was reading this article by Tim Urban - Your Life in Weeks and realised just how little time we actually have.
+Write a program that prints the number of characters in a user's name. You might need to Google for a function that calculates the length of a string. 
 
-[https://waitbutwhy.com/2014/05/life-weeks.html](https://waitbutwhy.com/2014/05/life-weeks.html)
+e.g.
 
-Create a program using maths and f-Strings that tells us how many days, weeks, months we have left if we live until 90 years old. 
+[https://www.google.com/search?q=how+to+get+the+length+of+a+string+in+python+stack+overflow](https://www.google.com/search?sxsrf=ACYBGNRxEaJIWyKHuWI0Lk24t4KuZVyeew:1579706585702&q=how+to+get+the+length+of+a+string+in+python+stack+overflow)
 
-It will take your current age as the input and output a message with our time left in this format:
-
-> You have x days, y weeks, and z months left. 
-
-Where x, y and z are replaced with the actual calculated numbers. 
-
- 
-
-**Warning** your output should match the Example Output format exactly, even the positions of the commas and full stops. 
+**Warning.** Your program should work for different inputs. e.g. any name that you input.
 
 # Example Input
 
 ```
-56
+Angela
 ```
 
 # Example Output
 
 ```
-You have 12410 days, 1768 weeks, and 408 months left.
+6
 ```
 
-e.g. When you hit **run**, this is what should happen:  
+e.g. When you hit **run**, this is what should happen:
 
- 
-![](https://cdn.fs.teachablecdn.com/RjqBViZQpyVTv7XY6cfA)
- 
+![](https://cdn.fs.teachablecdn.com/opevxYZSTM2ZHjbAX3XV) 
 
 # Hint
 
-1. There are 365 days in a year, 52 weeks in a year and 12 months in a year.
-2. Try copying the example output into your code and replace the relevant parts so that the sentence is formated the same way.
+1. You can put functions inside other functions.
+2. Don't try to print anything other than the length.
 
 # Test Your Code
 
 Before checking the solution, try copy-pasting your code into this repl: 
 
-[https://repl.it/@appbrewery/day-2-3-test-your-code](https://repl.it/@appbrewery/day-2-3-test-your-code)
+[https://repl.it/@appbrewery/day-1-3-test-your-code](https://repl.it/@appbrewery/day-1-3-test-your-code)
 
 This repl includes my testing code that will check if your code meets this assignment's objectives. 
 
 
 # Solution
 
-[https://repl.it/@appbrewery/day-2-3-solution](https://repl.it/@appbrewery/day-2-3-solution)
+[https://repl.it/@appbrewery/day-1-3-solution](https://repl.it/@appbrewery/day-1-3-solution)
