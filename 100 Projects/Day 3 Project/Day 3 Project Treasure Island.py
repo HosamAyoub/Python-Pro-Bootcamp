@@ -46,8 +46,10 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
     elif (order == "red") or (order == "Red") or (order == "RED") or (order == "rED"):
       print("It's a room full of fire. Game Over.")
-    else:
+    elif (order == "yellow") or (order == "Yellow") or (order == "YELLOW") or (order == "yELLOW"):
       print("You get eaten by beasts. Game Over.")
+    else:
+      print("You chose a door that doesn't exist. Game over")
   else:
     print("You get attacked by an angry trout. Game Over.")
 else:
