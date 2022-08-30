@@ -11,6 +11,7 @@ if size == "S":
   bill = 15
   if add_pepperoni == "Y": 
     bill += 2
+    
 elif size == "M":
   bill = 20
   if add_pepperoni == "Y": 
@@ -23,6 +24,7 @@ elif size == "L":
 
 else:
   print("Undefined size!")
+
 
 if extra_cheese == "Y":
   bill += 1
