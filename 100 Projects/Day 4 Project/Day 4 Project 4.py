@@ -40,11 +40,9 @@ elif enemy == computer_choice:
   print("Computer chose:\n" + game[computer_choice])
   print("It's a draw!")
 else:
+  print("Your chose:\n" + game[enemy])
+  print("Computer chose:\n" + game[computer_choice])
   if ((enemy == 0) and (computer_choice == 2)) or ((enemy == 1) and (computer_choice == 0) or ((enemy == 2) and (computer_choice == 1))):
-    print("Your chose:\n" + game[enemy])
-    print("Computer chose:\n" + game[computer_choice])
     print("You win!")
   else:
-    print("Your chose:\n" + game[enemy])
-    print("Computer chose:\n" + game[computer_choice])
     print("You lose!")
