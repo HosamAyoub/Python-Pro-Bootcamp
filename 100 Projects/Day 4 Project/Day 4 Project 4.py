@@ -33,7 +33,7 @@ computer_choice = random.randint(0, 2)
 
 enemy = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n"))
 
-if enemy > 3 or enemy < 0:
+if enemy > 2 or enemy < 0:
   print("You types invalid input, you lose!")
 elif enemy == computer_choice:
   print("Your chose:\n" + game[enemy])
