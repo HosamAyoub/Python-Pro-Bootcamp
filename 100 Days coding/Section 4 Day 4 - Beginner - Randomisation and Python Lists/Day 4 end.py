@@ -21,3 +21,7 @@ print(random.choice(mylist))
 print(random.choice(mylist))
 print(random.choice(mylist))
 
+str_input = input("Enter any word: \n")
+str_arr = str_input.split(" ")
+print(str_arr)
+print(len(str_arr))
