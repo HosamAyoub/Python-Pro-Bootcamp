@@ -3,7 +3,7 @@ def turn_right():
     turn_left()
     turn_left()
 
-while at_goal() == False:
+while not at_goal():
     move()
     turn_left()
     move()
