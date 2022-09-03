@@ -14,4 +14,4 @@ for letter in word:
     if letter == guess:
         print("Right")
     else:
-        print("Wrong!")
+        print("Wrong")
