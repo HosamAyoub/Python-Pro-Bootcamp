@@ -10,7 +10,7 @@ for iterator in chosen_word:
     display.append("_")
 
 print(f"Pssst, the solution is {chosen_word}.")
-#while
+
 while lives != 0:
     guess = input("Guess a letter: ").lower()
     #Check guessed letter
