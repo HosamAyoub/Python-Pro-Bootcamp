@@ -14,7 +14,7 @@ def ecrypt(plain_text, shift_amount):
             encrypted_word += alphabet[position + shift_amount]
         else:
             encrypted_word += alphabet[position + shift_amount - len(alphabet)]
-    print(encrypted_word)
+    print(f"The encoded text is {encrypted_word}")
     #e.g. 
     #plain_text = "hello"
     #shift = 5
