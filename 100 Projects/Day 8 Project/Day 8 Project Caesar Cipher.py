@@ -6,14 +6,14 @@ shift = int(input("Type the shift number:\n"))
 
 decoded_word = ""
 
-def ecrypt(text, shift):
+def ecrypt(plain_text, shift_amount):
     encrypted_word = ''
-    for letter in text:
+    for letter in plain_text:
         position = alphabet.index(letter)
-        if (position + shift) < len(alphabet):
-            encrypted_word += alphabet[position + shift]
+        if (position + shift_amount) < len(alphabet):
+            encrypted_word += alphabet[position + shift_amount]
         else:
-            encrypted_word += alphabet[position + shift - len(alphabet)]
+            encrypted_word += alphabet[position + shift_amount - len(alphabet)]
     print(encrypted_word)
     #e.g. 
     #plain_text = "hello"
