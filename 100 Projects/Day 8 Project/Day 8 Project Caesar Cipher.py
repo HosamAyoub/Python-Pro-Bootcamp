@@ -30,6 +30,6 @@ while(True):
         caesar(text, shift, direction)
     else:
         print("Please enter 'encode' or 'decode' next time.")
-    if input("Type 'no' to exit program.") == 'no':
+    if input("Type 'no' to exit program. Otherwise type anything.") == 'no':
         print("Goodbye!")
         break
