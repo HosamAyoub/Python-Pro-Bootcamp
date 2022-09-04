@@ -24,7 +24,7 @@ def decrypt(plain_text, shift_amount):
     for letter in plain_text:
         position = alphabet.index(letter)
         decoded_word += alphabet[position - shift_amount]
-    print(f"The encoded text is {decoded_word}")
+    print(f"The decoded text is {decoded_word}")
 
 
 if direction == 'encode':
