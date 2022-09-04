@@ -9,16 +9,16 @@ def caesar(plain_text, shift_amount, cipher_direction):
     end_text = ""
     if cipher_direction == 'decode': 
         shift_amount *= -1
-    for letter in plain_text:
-        if letter.isalpha():
-            position = alphabet.index(letter)
+    for char in plain_text:
+        if char.isalpha():
+            position = alphabet.index(char)
             if position + shift_amount < 26:
                 new_position = position + shift_amount
             else:
                 new_position =  (position + shift_amount) % 26
             end_text += alphabet[new_position]
         else:
-            end_text += letter
+            end_text += char
     print(f"The {cipher_direction} text is {end_text}")
 
 print(logo)
