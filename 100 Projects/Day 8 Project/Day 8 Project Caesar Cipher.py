@@ -19,7 +19,6 @@ def encrypt(plain_text, shift_amount):
     print(f"The encoded text is {encrypted_word}")
 
 
-#TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
 def decrypt(plain_text, shift_amount):
     decoded_word = ""
     for letter in plain_text:
