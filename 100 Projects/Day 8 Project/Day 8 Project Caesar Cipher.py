@@ -28,12 +28,6 @@ def decrypt(plain_text, shift_amount):
     print(f"The encoded text is {decoded_word}")
 
 
-#e.g.
-#cipher_text = "mjqqt"
-#shift = 5
-#plain_text = "hello"
-#print output: "The decoded text is hello"
-
 if direction == 'encode':
     encrypt(text, shift)
 elif direction == 'decode':
