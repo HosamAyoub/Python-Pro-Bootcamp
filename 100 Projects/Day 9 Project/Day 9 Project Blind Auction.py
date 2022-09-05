@@ -18,7 +18,7 @@ def record_bidding(bidding_dict):
         name = input("What is your name?\n")
         bid = int(input("What is your bid?\n$"))
         bidding_dict[name] = bid
-        continue_state = input("Are there any other bidders? Type 'yes or 'no'.\n")
+        continue_state = input("Are there any other bidders?\nType anything to continue or 'no' to stop.\n")
         if (continue_state == "no" or continue_state == "No" or continue_state == "NO"             or continue_state == "nO"):
             break
         clear()
