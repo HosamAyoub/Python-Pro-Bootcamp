@@ -5,8 +5,8 @@ auction = {}
 def find_highest_bidder(bidding_dict):
     maximum = 0
     winner = ""
-    for key in auction:
-        if auction[key] > maximum:
+    for key in bidding_dict:
+        if bidding_dict[key] > maximum:
             maximum = auction[key]
             winner = key
     
@@ -17,7 +17,7 @@ def record_bidding(bidding_dict):
     while (True):
         name = input("What is your name?\n")
         bid = int(input("What is your bid?\n$"))
-        auction[name] = bid
+        bidding_dict[name] = bid
         continue_state = input("Are there any other bidders? Type 'yes or 'no'.\n")
         if (continue_state == "no" or continue_state == "No" or continue_state == "NO"             or continue_state == "nO"):
             break
