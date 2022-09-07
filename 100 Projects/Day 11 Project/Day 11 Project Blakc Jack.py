@@ -27,9 +27,9 @@ def compare(player_total_score, computer_total_score):
     """Returns the winner."""
     if (player_total_score == 0) and (computer_total_score == 0):
         return "Draw, both of you got a Blackjack 🤯"
-    elif (computer_total_score == 0):
+    elif (computer_total_score == 0) and (player_total_score < 21):
         return "Lose, opponent has Blackjack 😱"
-    elif (player_total_score == 0):
+    elif (player_total_score == 0) and (computer_total_score < 21):
         return "Win, with a Blackjack 😎"
     elif (player_total_score > 21):
         return "You went over. You lose 😭"
