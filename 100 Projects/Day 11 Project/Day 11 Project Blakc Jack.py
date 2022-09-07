@@ -70,7 +70,6 @@ def black_jack():
             while (computer_score < 16) and (computer_score < 16 != 0):
                 computer.append(deal_card())
                 computer_score = calculate_score(computer)
-            result = compare(player_score, computer_score)
         else:
             while (input("Type 'y' to get another card, type 'n' to pass: ") == 'y'):
                 player.append(deal_card())
@@ -80,7 +79,7 @@ def black_jack():
             while (computer_score < 16):
                 computer.append(deal_card())
                 computer_score = calculate_score(computer)
-            result = compare(player_score, computer_score)
+        result = compare(player_score, computer_score)
         show_score(player_score, player, computer_score, computer)
         print(result)
 
