@@ -66,14 +66,10 @@ def black_jack():
         computer_score = calculate_score(computer)
         print(f"Your cards {player}, current score: {player_score}")
         print(f"Computer's first card: {computer[0]}")
-        if (player_score == 0) and (computer_score == 0):
-            result = compare(player_score, computer_score)
-        elif (player_score == 0):
-            while (computer_score < 16):
+        if (player_score == 0) or (computer_score == 0):
+            while (computer_score < 16) and (computer_score < 16 != 0):
                 computer.append(deal_card())
                 computer_score = calculate_score(computer)
-            result = compare(player_score, computer_score)
-        elif (computer_score == 0):
             result = compare(player_score, computer_score)
         else:
             while (input("Type 'y' to get another card, type 'n' to pass: ") == 'y'):
