@@ -3,7 +3,11 @@ from art import logo
 from random import choice
 from replit import clear
 
-def calculator(cards_list):
+def deal_card():
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    return choice(cards)
+
+def calculate_score(cards_list):
     if (sum(cards_list) == 21) and (len(cards_list) == 2):
         return 0
     elif (sum(cards_list) > 21) and (11 in cards_list):
@@ -16,68 +20,66 @@ def calculator(cards_list):
 
 def compare(player_total_score, computer_total_score):
     if (player_total_score == 0) and (computer_total_score == 0):
-        print("Draw, both of you got a Blackjack 🤨")
+        return "Draw, both of you got a Blackjack 🤨"
     elif (computer_total_score == 0):
-        print("Lose, opponent has Blackjack 😱")
+        return "Lose, opponent has Blackjack 😱"
     elif (player_total_score == 0):
-        print("Win, with a Blackjack 😎")
+        return "Win, with a Blackjack 😎"
     elif (player_total_score > 21):
-        print("You went over. You lose 😭")
+        return "You went over. You lose 😭"
     elif (computer_total_score > 21):
-        print("Opponent went over. You win 😁")
+        return "Opponent went over. You win 😁"
     elif (computer_total_score == player_total_score):
-        print("Draw 🙃")
+        return "Draw 🙃"
     elif (player_total_score > computer_total_score):
-        print("You win 😃")
+        return "You win 😃"
     else:
-        print("You lose 😤")
+        return "You lose 😤"
+
+def show_score(player_final_score, player_final_cards, computer_final_score, computer_final_cards):
+    if player_final_score == 0:
+        player_final_score = 21
+    if computer_final_score == 0:
+        computer_final_score = 21
+    print(f"Your cards: {player_final_cards}, final score: {player_final_score}")
+    print(f"Computer's final hand: {computer_final_cards}, final score: {computer_final_score}")
 
 def black_jack():
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    player = []
-    computer = []
     while(True):
         if (input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == 'n'):
             print("Goodbye!")
             break
-        player.clear()
-        computer.clear()
+        player = []
+        computer = []
         clear()
         print(logo)
-        player.append(choice(cards))
-        player.append(choice(cards))
-        computer.append(choice(cards))
-        computer.append(choice(cards))
-        player_score = calculator(player)
-        computer_score = calculator(computer)
+        for i in range(2):
+            player.append(deal_card())
+            computer.append(deal_card())
+        player_score = calculate_score(player)
+        computer_score = calculate_score(computer)
         print(f"Your cards {player}, current score: {player_score}")
         print(f"Computer's first card: {computer[0]}")
         if (player_score == 0) and (computer_score == 0):
-            print(f"Your cards: {player}, final score: {player_score + 21}")
-            print(f"Computer's final hand: {computer}, final score: {computer_score + 21}")
-            compare(player_score, computer_score)
+            result = compare(player_score, computer_score)
         elif (player_score == 0):
             while (computer_score < 16):
-                computer.append(choice(cards))
-                computer_score = calculator(computer)
-            print(f"Your cards: {player}, final score: {player_score + 21}")
-            print(f"Computer's final hand: {computer}, final score: {computer_score}")
-            compare(player_score, computer_score)
+                computer.append(deal_card())
+                computer_score = calculate_score(computer)
+            result = compare(player_score, computer_score)
         elif (computer_score == 0):
-            print(f"Your cards: {player}, final score: {player_score}")
-            print(f"Computer's final hand: {computer}, final score: {computer_score + 21}")
-            compare(player_score, computer_score)
+            result = compare(player_score, computer_score)
         else:
             while (input("Type 'y' to get another card, type 'n' to pass: ") == 'y'):
-                player.append(choice(cards))
-                player_score = calculator(player)
+                player.append(deal_card())
+                player_score = calculate_score(player)
                 print(f"Your cards {player}, current score: {player_score}")
                 print(f"Computer's first card: {computer[0]}")
             while (computer_score < 16):
-                computer.append(choice(cards))
-                computer_score = calculator(computer)
-            print(f"Your cards: {player}, final score: {player_score}")
-            print(f"Computer's final hand: {computer}, final score: {computer_score}")
-            compare(player_score, computer_score)
+                computer.append(deal_card())
+                computer_score = calculate_score(computer)
+            result = compare(player_score, computer_score)
+        show_score(player_score, player, computer_score, computer)
+        print(result)
 
 black_jack()
