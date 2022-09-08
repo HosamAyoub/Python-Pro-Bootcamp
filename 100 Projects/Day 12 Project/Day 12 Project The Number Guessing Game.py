@@ -28,7 +28,6 @@ def game():
     """The logic of the game whic prints game logo generate the random number and take the user guesses"""
     print(logo)
     rand_num = randint(1, 100)
-    print(rand_num)
     print("I'm thinking of a number between 1 and 100.")
     attempts = 0
     while (attempts == 0):
