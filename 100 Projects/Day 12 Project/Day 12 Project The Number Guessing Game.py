@@ -25,7 +25,7 @@ def check_guess(user_guess, random_number, turns):
         return 0
  
 def game():
-    """The logic of the game which prints the game logo and generates the random number and take the user guesses"""
+    """The logic of the game which prints the game logo, generates the random number and take the user guesses"""
     print(logo)
     rand_num = randint(1, 100)
     print("I'm thinking of a number between 1 and 100.")
