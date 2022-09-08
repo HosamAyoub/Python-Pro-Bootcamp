@@ -5,6 +5,7 @@ EASY_ATTEMPTS = 10
 HARD_ATTEMPTS = 5
 
 def check_guess(user_guess, random_number, turns):
+    """Check if the answer was right or wrong and if it's wrong it will tell him if his guess was too high or too low then return the remaining attempts"""
     if (user_guess < random_number):
         print("Too low.")
         if (turns > 1):
