@@ -42,6 +42,7 @@
 # print(total_words)
 
 # #Use a Debugger
+#The unexpected behavior will be that the b_list will has one element on which is 26 because the line 50 was indent wrong it should have be if the for loop not outside it
 # def mutate(a_list):
 #   b_list = []
 #   for item in a_list:
