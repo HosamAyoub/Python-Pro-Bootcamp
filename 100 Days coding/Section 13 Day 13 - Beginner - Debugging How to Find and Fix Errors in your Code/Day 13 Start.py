@@ -18,13 +18,14 @@
 
 # # Play Computer
 #The problem come from the condition of the if and elif that both of them don't cove the year of 1994 so we should change one range of them to cover this year
-year = int(input("What's your year of birth?"))
-if year > 1980 and year < 1994:
-  print("You are a millenial.")
-elif year > 1994:
-  print("You are a Gen Z.")
+# year = int(input("What's your year of birth?"))
+# if year > 1980 and year < 1994:
+#   print("You are a millenial.")
+# elif year > 1994:
+#   print("You are a Gen Z.")
 
 # # Fix the Errors
+#The bug here is from the data types because the age will get and string input and it is used in the if statment as an int so that will generate a bug we should typecast the input data to be int
 # age = input("How old are you?")
 # if age > 18:
 # print("You can drive at age {age}.")
