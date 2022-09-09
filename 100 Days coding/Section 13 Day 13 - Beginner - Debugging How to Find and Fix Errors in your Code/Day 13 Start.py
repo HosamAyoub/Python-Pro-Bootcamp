@@ -26,6 +26,8 @@
 
 # # Fix the Errors
 #The bug here is from the data types because the age will get and string input and it is used in the if statment as an int so that will generate a bug we should typecast the input data to be int
+#Another bug is in the indentation in line 33 we should fix the indentation of the line
+#Unexpected behavior of the print will be appear because we hadn't put f"String" we just put a "String" in the print function so it will print the {age} as it's no its value
 # age = input("How old are you?")
 # if age > 18:
 # print("You can drive at age {age}.")
