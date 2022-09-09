@@ -17,11 +17,12 @@
 # print(dice_imgs[dice_num])
 
 # # Play Computer
-# year = int(input("What's your year of birth?"))
-# if year > 1980 and year < 1994:
-#   print("You are a millenial.")
-# elif year > 1994:
-#   print("You are a Gen Z.")
+#The problem come from the condition of the if and elif that both of them don't cove the year of 1994 so we should change one range of them to cover this year
+year = int(input("What's your year of birth?"))
+if year > 1980 and year < 1994:
+  print("You are a millenial.")
+elif year > 1994:
+  print("You are a Gen Z.")
 
 # # Fix the Errors
 # age = input("How old are you?")
