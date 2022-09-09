@@ -1,7 +1,7 @@
 ############DEBUGGING#####################
 
 # # Describe Problem
-#the for loop count from 1 to 19, the function will print "You got it" when the value of i become 20 and that will never happen so we should change its range to be 21
+#The for loop count from 1 to 19, the function will print "You got it" when the value of i become 20 and that will never happen so we should change its range to be 21
 # def my_function():
 #This 20 in the range should be 21
 #   for i in range(1, 20):
@@ -10,6 +10,7 @@
 # my_function()
 
 # # Reproduce the Bug
+#The bug here come when the dice_num become 6 and the last element of the list has index 5 so the interpreter generate error
 # from random import randint
 # dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]
 # dice_num = randint(1, 6)
