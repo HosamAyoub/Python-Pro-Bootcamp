@@ -33,6 +33,7 @@
 # print("You can drive at age {age}.")
 
 # #Print is Your Friend
+#The unexpexted behavior come from line 40 becuase the operation in this line is comparing the input data with the word_per_page which is 0 so if the user input any number except 0 it will generate False which is 0 so the total words will be 0 too, to solve this problem we have to change the operator in line 40 to be = which is assign operator
 # pages = 0
 # word_per_page = 0
 # pages = int(input("Number of pages: "))
