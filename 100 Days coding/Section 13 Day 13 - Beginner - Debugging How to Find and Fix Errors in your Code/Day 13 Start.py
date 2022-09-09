@@ -10,7 +10,7 @@
 # my_function()
 
 # # Reproduce the Bug
-#The bug here come when the dice_num become 6 and the last element of the list has index 5 so the interpreter generate error
+#The bug here come when the dice_num become 6 and the last element of the list has index 5 so the interpreter generate error the 6 in the randint should be from 0 to 5 to cover all element
 # from random import randint
 # dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]
 # dice_num = randint(1, 6)
