@@ -9,4 +9,5 @@ def pick ():
 
 print(logo)
 first_choice = pick()
+print(f"Compare A: {first_choice["name"]}, a {first_choice["description"]}, from {first_choice['country']}.")
 print(vs)
