@@ -50,7 +50,8 @@ def game():
     print(f"Sorry, that's wrong. Final score: {score}")
 
 while(True):
+    clear()
     game()
-    if (input("Enter 'y' to play again or anythin to exit").upper() != "Y"):
+    if (input("Enter 'y' to play again or enter anything to exit: ").upper() != "Y"):
         print("Goodbye!")
         break
