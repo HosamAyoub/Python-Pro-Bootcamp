@@ -16,6 +16,7 @@ while(second_choice == first_choice):
     second_choice = pick()
 print(f"Compare B: {second_choice['name']}, a {second_choice['description']}, from {second_choice['country']}.")
 answer = None
+score = 0
 while ((answer != 'A') and (answer != 'B')) or ((answer != 'a') and (answer != 'b')):
     answer = input("Who has more followers? Type 'A' or 'B': ")
 if (first_choice["follower_count"] > second_choice["follower_count"]):
@@ -23,4 +24,9 @@ if (first_choice["follower_count"] > second_choice["follower_count"]):
 elif (first_choice["follower_count"] < second_choice["follower_count"]):
     right_answer = 'B'
 else:
-    right_answer = "both"
+    right_answer = 'Both'
+while ((answer == right_answer) or (right_answer == 'Both')):
+    score += 1
+    print(f"You're right! Current score: {score}")
+else:
+    print(f"Sorry, that's wrong. Final score: {score}")
