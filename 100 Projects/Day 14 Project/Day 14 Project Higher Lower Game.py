@@ -44,5 +44,6 @@ while ((answer == right_answer) or (right_answer == 'Both')):
         right_answer = 'B'
     else:
         right_answer = 'Both'
+        
 else:
     print(f"Sorry, that's wrong. Final score: {score}")
