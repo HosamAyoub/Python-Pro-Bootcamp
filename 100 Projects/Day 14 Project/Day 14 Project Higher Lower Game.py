@@ -26,7 +26,7 @@ elif (first_choice["follower_count"] < second_choice["follower_count"]):
     right_answer = 'B'
 else:
     right_answer = 'Both'
-while ((answer == right_answer) or (right_answer == 'Both')):
+while((answer == right_answer) or (right_answer == 'Both')):
     score += 1
     print(f"You're right! Current score: {score}")
     first_choice = second_choice
