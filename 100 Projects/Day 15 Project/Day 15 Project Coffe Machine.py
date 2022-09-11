@@ -76,6 +76,7 @@ def calc_resources(order):
 
 
 def coffee_machine():
+    """The logic of the coffee machine"""
     global resources
     choice = input("What would you like? (espresso/latte/cappuccino): ").lower()
     if (choice in MENU):
