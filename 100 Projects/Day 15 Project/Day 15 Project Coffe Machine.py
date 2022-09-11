@@ -32,6 +32,7 @@ resources = {
 
 profit = 0.0
 
+
 def check_resources(order):
     for gradient in MENU[order]['ingredients']:
         if (resources[gradient] >= MENU[order]['ingredients'][gradient]):
@@ -40,3 +41,12 @@ def check_resources(order):
             print(f"Sorry there is not enough {gradient}.")
             return False
     return True
+
+
+def calc_money():
+    inserted_money = 0
+    inserted_money += int(input("how many quarters?: ")) * 0.25
+    inserted_money += int(input("how many dimes?: ")) * 0.10
+    inserted_money += int(input("how many nickles?: ")) * 0.05
+    inserted_money += int(input("how many penny?: ")) * 0.01
+    return inserted_money
