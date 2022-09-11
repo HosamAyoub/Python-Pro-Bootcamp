@@ -67,6 +67,7 @@ def calc_transaction(inserted_money, order):
 
 
 def calc_resources(order):
+    """calculate the remaining resources and make the order, has no return"""
     global profit
     for gradient in MENU[order]['ingredients']:
         resources[gradient] -=  MENU[order]['ingredients'][gradient]
