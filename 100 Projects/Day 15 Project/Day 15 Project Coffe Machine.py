@@ -50,3 +50,11 @@ def calc_money():
     inserted_money += int(input("how many nickles?: ")) * 0.05
     inserted_money += int(input("how many penny?: ")) * 0.01
     return inserted_money
+
+
+def calc_transaction(inserted_money, order):
+    in_change = 0
+    if (inserted_money >= MENU[order]['cost']):
+        in_change = inserted_money - MENU[order]['cost']
+        print(f"Here is ${in_change:.2f} in change.")
+        return True
