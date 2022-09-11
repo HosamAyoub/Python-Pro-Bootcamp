@@ -90,3 +90,7 @@ def coffee_machine():
     else:
         print("Invalid input")
     return True
+
+
+while(coffee_machine()):
+    pass
