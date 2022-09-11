@@ -55,6 +55,7 @@ def calc_money():
 
 
 def calc_transaction(inserted_money, order):
+    """Check if the inserted money was enough for the order and calculates the in change money, returns bool"""
     in_change = 0
     if (inserted_money >= MENU[order]['cost']):
         in_change = inserted_money - MENU[order]['cost']
