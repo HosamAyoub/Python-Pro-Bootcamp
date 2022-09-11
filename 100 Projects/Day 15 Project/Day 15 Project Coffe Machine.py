@@ -58,3 +58,6 @@ def calc_transaction(inserted_money, order):
         in_change = inserted_money - MENU[order]['cost']
         print(f"Here is ${in_change:.2f} in change.")
         return True
+    else:
+        print("Sorry that's not enough money. Money refunded.")
+        return False
