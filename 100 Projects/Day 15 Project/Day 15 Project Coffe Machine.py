@@ -45,6 +45,7 @@ def check_resources(order):
 
 
 def calc_money():
+    """Calculate the total inserted coins for each order, returns the total inserted money"""
     inserted_money = 0
     inserted_money += int(input("how many quarters?: ")) * 0.25
     inserted_money += int(input("how many dimes?: ")) * 0.10
