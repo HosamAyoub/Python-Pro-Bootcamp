@@ -31,3 +31,12 @@ resources = {
 }
 
 profit = 0.0
+
+def check_resources(order):
+    for gradient in MENU[order]['ingredients']:
+        if (resources[gradient] >= MENU[order]['ingredients'][gradient]):
+            pass
+        else:
+            print(f"Sorry there is not enough {gradient}.")
+            return False
+    return True
