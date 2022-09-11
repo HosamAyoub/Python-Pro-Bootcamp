@@ -60,4 +60,11 @@ def calc_transaction(inserted_money, order):
         return True
     else:
         print("Sorry that's not enough money. Money refunded.")
-        return False
+        return False        
+
+
+def calc_resources(order):
+    global profit
+    for gradient in MENU[order]['ingredients']:
+        resources[gradient] -=  MENU[order]['ingredients'][gradient]
+    profit +=  MENU[order]["cost"]
