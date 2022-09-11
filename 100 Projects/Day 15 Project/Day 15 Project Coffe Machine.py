@@ -80,3 +80,6 @@ def coffee_machine():
             money = calc_money()
             if calc_transaction(money, choice):
                 calc_resources(choice)
+    elif (choice.lower() == 'off'):
+        return False
+    
