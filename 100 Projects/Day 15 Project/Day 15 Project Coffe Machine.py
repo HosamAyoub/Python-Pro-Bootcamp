@@ -68,3 +68,4 @@ def calc_resources(order):
     for gradient in MENU[order]['ingredients']:
         resources[gradient] -=  MENU[order]['ingredients'][gradient]
     profit +=  MENU[order]["cost"]
+    print(f"Here is your {order} ☕️. Enjoy!")
