@@ -82,4 +82,8 @@ def coffee_machine():
                 calc_resources(choice)
     elif (choice.lower() == 'off'):
         return False
-    
+    elif (choice.lower() == 'report'):
+        print(f"Water: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}ml")
+        print(f"Coffee: {resources['coffee']}g")
+        print(f"Money: ${profit:.2f}")
