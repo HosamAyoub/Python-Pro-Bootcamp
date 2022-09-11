@@ -87,3 +87,6 @@ def coffee_machine():
         print(f"Milk: {resources['milk']}ml")
         print(f"Coffee: {resources['coffee']}g")
         print(f"Money: ${profit:.2f}")
+    else:
+        print("Invalid input")
+    return True
