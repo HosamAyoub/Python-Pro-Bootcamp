@@ -69,3 +69,14 @@ def calc_resources(order):
         resources[gradient] -=  MENU[order]['ingredients'][gradient]
     profit +=  MENU[order]["cost"]
     print(f"Here is your {order} ☕️. Enjoy!")
+
+
+def coffee_machine():
+    global resources
+    choice = input("What would you like? (espresso/latte/cappuccino): ").lower()
+    if (choice in MENU):
+        if (check_resources(choice)):
+            print("Please insert coins.")
+            money = calc_money()
+            if calc_transaction(money, choice):
+                calc_resources(choice)
