@@ -3,7 +3,7 @@ from turtle import Turtle, Screen
 tom = Turtle()
 tom.shape("turtle")
 tom.color("dark blue")
-print(tom.color())
+tom.fd(100)
 print(tom)
 
 my_screen = Screen()
