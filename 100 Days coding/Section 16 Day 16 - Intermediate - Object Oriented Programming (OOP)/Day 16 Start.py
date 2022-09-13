@@ -1,9 +1,10 @@
 from turtle import Turtle, Screen
+import prettytable
 
 tom = Turtle()
 tom.shape("turtle")
 tom.color("dark blue")
-tom.fd(100)
+tom.forward(100)
 print(tom)
 
 my_screen = Screen()
