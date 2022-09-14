@@ -6,6 +6,7 @@ drinks = Menu()
 options = drinks.get_items()
 info = CoffeeMaker()
 money_machine = MoneyMachine()
+
 while (True):
     order = input(f"What would you like? {options}: ").lower()
     if (order == 'off'):
