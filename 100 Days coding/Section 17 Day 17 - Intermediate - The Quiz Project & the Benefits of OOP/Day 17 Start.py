@@ -5,6 +5,7 @@ class User:
 
 user1 = User("007", "Hosam")
 print(user1.id)
+print(user1.username)
 
 # user1.id = "345"
 # user1.username = "Hosam"
