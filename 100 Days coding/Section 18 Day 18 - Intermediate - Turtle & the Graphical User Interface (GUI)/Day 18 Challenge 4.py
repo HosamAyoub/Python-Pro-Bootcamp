@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-from random import choice, randint
+from random import randint
 import turtle
 
 def random_color():
@@ -10,7 +10,6 @@ def random_color():
     return rgb
 
 tom = Turtle()
-# colors = ["black", "gray", "light gray", "blue", "midnight blue", "cyan", "green", "dark green", "light green", "red", "orange", "purple", "brown"]
 turtle.colormode(255)
 tom.speed(5)
 tom.pensize(10)
