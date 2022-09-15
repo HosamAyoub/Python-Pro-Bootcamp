@@ -9,9 +9,11 @@
 #     rgb_colors.append((red, green, blue))
 # print(rgb_colors)
 
+
 from turtle import Turtle, Screen
 from random import choice
 import turtle
+
 
 pointer = Turtle()
 turtle.colormode(255)
