@@ -3,7 +3,7 @@ from random import choice, randint
 
 tom = Turtle()
 colors = ["black", "gray", "light gray", "blue", "midnight blue", "cyan", "green", "dark green", "light green", "red", "orange", "purple", "brown"]
-tom.speed(6)
+tom.speed(5)
 tom.pensize(10)
 for sides in range(100):
     tom.color(choice(colors))
