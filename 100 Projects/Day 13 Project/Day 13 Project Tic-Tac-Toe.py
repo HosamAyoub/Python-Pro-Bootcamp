@@ -89,3 +89,21 @@ winner = 0
 display_board(board)
 computer_move = 5
 
+while (make_list_of_free_fields(board)):
+    board = enter_move(board)
+    if board.count('O') > 2:
+        winner = victory_for(board, 'O')
+        if winner:
+            break 
+       
+    while str(computer_move) not in board:
+        computer_move = randint(1, 9)
+        
+    board = board.replace(str(computer_move), "X")
+    display_board(board)
+    if board.count('X') > 2:
+        winner = victory_for(board, 'X')
+        if winner:
+            break
+else:
+    print("It's a draw😶 ")
