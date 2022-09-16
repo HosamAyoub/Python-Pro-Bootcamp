@@ -27,6 +27,7 @@ def make_list_of_free_fields(board):
 
 
 def victory_for(board, sign):
+    '''Check the victory for the passed sign ('X' or 'O') and return True if there is a winner'''
     winning_cases = [[1, 2, 3], [1, 4, 7], [1, 5, 9], [2, 5, 8], [3, 6, 9], [3, 5, 7], [4, 5, 6], [7, 8, 9]]
     arr = []
     pos = 0
