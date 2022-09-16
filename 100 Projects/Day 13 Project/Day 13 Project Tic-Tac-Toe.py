@@ -68,6 +68,8 @@ def victory_for(board, sign):
     return False
 
 
+
+#The start of the code I assumed that the computer will start at first and play at position 5
 board = '''
 +-------+-------+-------+
 |       |       |       |
