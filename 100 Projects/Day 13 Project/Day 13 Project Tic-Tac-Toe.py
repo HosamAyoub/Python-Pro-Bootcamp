@@ -17,8 +17,11 @@ def enter_move(board):
 
 
 def make_list_of_free_fields(board):
-    # The function browses the board and builds a list of all the free squares; 
-    # the list consists of tuples, while each tuple is a pair of row and column numbers.
+    free_squares = []
+    for free in range(1, 10):
+        if str(free) in board:  
+            free_squares.append(free)
+    return len(free_squares) != 0
 
 
 def victory_for(board, sign):
