@@ -3,6 +3,7 @@ def display_board(board):
 
 
 def enter_move(board):
+    '''Make the user enter his move and return none'''
     while True:
         try:
             user_move = int(input("Enter your move: "))
