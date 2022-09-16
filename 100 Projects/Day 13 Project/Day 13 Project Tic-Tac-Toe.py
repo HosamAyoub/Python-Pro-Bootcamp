@@ -52,7 +52,7 @@ def victory_for(board, sign):
             temp.remove(i)
             if temp in winning_cases:
                 return True
-        return False
+    return False
 
 
 board = '''
