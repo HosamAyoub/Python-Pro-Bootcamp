@@ -43,6 +43,16 @@ def victory_for(board, sign):
                 while pos - sub - 258 > 9:
                     sub += 7
                 arr.append(pos - sub - 258)
+    if len(arr) == 3:
+        if arr in winning_cases:
+            return True
+    elif len(arr) == 4:
+        for i in arr:
+            temp = arr.copy()
+            temp.remove(i)
+            if temp in winning_cases:
+                return True
+        return False
 
 
 board = '''
