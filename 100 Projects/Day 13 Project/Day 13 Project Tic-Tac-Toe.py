@@ -70,7 +70,22 @@ def victory_for(board, sign):
     return False
 
 
-def draw_move(board):
-    # The function draws the computer's move and updates the board.
+board = '''
++-------+-------+-------+
+|       |       |       |
+|   1   |   2   |   3   |
+|       |       |       |
++-------+-------+-------+
+|       |       |       |
+|   4   |   X   |   6   |
+|       |       |       |
++-------+-------+-------+
+|       |       |       |
+|   7   |   8   |   9   |
+|       |       |       |
++-------+-------+-------+
+'''
+winner = 0
+display_board(board)
+computer_move = 5
 
-displ
