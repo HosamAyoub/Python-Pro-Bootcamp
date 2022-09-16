@@ -52,6 +52,16 @@ def victory_for(board, sign):
             temp.remove(i)
             if temp in winning_cases:
                 return True
+    elif len(arr) == 5:
+        for i in arr:
+            temp = arr.copy()
+            temp.remove(i)
+            temp2 = temp.copy()
+            for k in temp:
+                temp2 = temp.copy()
+                temp2.remove(k)
+                if temp2 in winning_cases:
+                    return True
     return False
 
 
