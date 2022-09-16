@@ -3,8 +3,17 @@ def display_board(board):
 
 
 def enter_move(board):
-    # The function accepts the board's current status, asks the user about their move, 
-    # checks the input, and updates the board according to the user's decision.
+    while True:
+        try:
+            user_move = int(input("Enter your move: "))
+            if str(user_move) in board:
+                board = board.replace(str(user_move), "O")
+                display_board(board)
+                return board
+            else:
+                print("Please enter a valid the spot number")
+        except:
+            print("Please enter a number.")
 
 
 def make_list_of_free_fields(board):
