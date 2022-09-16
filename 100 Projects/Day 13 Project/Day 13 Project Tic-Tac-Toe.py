@@ -1,21 +1,5 @@
 def display_board(board):
-    # The function accepts one parameter containing the board's current status
-    # and prints it out to the console.
-    print('''
-    +-------+-------+-------+
-|       |       |       |
-|   1   |   2   |   3   |
-|       |       |       |
-+-------+-------+-------+
-|       |       |       |
-|   4   |   X   |   6   |
-|       |       |       |
-+-------+-------+-------+
-|       |       |       |
-|   7   |   8   |   9   |
-|       |       |       |
-+-------+-------+-------+
-''')
+    print(board)
 
 
 def enter_move(board):
