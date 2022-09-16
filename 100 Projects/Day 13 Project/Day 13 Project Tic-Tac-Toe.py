@@ -69,7 +69,7 @@ def victory_for(board, sign):
 
 
 
-#The start of the code I assumed that the computer will start at first and play at position 5
+#The start of the code I assumed that the computer will start at first and play at position 5   
 board = '''
 +-------+-------+-------+
 |       |       |       |
@@ -94,6 +94,7 @@ while (make_list_of_free_fields(board)):
     if board.count('O') > 2:
         winner = victory_for(board, 'O')
         if winner:
+            print("You win😎 ")
             break 
        
     while str(computer_move) not in board:
@@ -104,6 +105,7 @@ while (make_list_of_free_fields(board)):
     if board.count('X') > 2:
         winner = victory_for(board, 'X')
         if winner:
+            print("You lose🥱 ")
             break
 else:
     print("It's a draw😶 ")
