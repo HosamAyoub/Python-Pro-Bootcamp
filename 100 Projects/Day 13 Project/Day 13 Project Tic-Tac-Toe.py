@@ -1,3 +1,5 @@
+from random import randint
+
 def display_board(board):
     print(board)
 
@@ -18,7 +20,7 @@ def enter_move(board):
 
 
 def make_list_of_free_fields(board):
-    '''Check if there us a free spots or not return True if thers is free spots'''
+    '''Check if there us a free spots or not return True if there is free spots'''
     free_squares = []
     for free in range(1, 10):
         if str(free) in board:  
