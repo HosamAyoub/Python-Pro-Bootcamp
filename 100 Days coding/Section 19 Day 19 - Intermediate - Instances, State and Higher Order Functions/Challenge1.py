@@ -3,6 +3,7 @@ from turtle import Turtle, Screen
 tom = Turtle()
 screen = Screen()
 
+
 def move_forward():
     tom.forward(10)
 
@@ -18,6 +19,7 @@ def rotate_counter_clock_wise():
 def clear():
     tom.home()
     tom.clear()
+
 
 screen.listen()
 screen.onkey(key = "w", fun = move_forward)
