@@ -1,4 +1,5 @@
 from turtle import Turtle, Screen
+from random import randint
 
 colors = ["purple", "blue", "orange", "red"]
 y_positions = [150, 50, -50, -150]
