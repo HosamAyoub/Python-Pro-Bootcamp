@@ -9,6 +9,9 @@ def move_forward():
 def move_backward():
     tom.backward(10)
 
+def rotate_clock_wise():
+    tom.right(10)
+
 screen.listen()
 screen.onkey(key = "w", fun = move_forward)
 screen.onkey(key = "s", fun = move_backward)
