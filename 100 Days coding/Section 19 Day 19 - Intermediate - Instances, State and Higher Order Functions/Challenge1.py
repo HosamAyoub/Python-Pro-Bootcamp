@@ -17,6 +17,7 @@ def rotate_counter_clock_wise():
 
 def clear():
     tom.clear()
+    tom.home()
 
 screen.listen()
 screen.onkey(key = "w", fun = move_forward)
