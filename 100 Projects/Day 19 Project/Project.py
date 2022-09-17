@@ -18,6 +18,7 @@ for turtle_index in range(4):
     new_turtle.color(colors[turtle_index])
     new_turtle.goto(x = -235, y = y_positions[turtle_index])
     turtles.append(new_turtle)
+    print(id(new_turtle))
 
 race_on = True
 while race_on:
@@ -28,5 +29,5 @@ while race_on:
                 print(f"You've won! the {user_bet.capitalize()} turtle is the winner!")
             else:
                 print(f"You've lost! the {turtles_names[turtles.index(turtle)].capitalize()} turtle is the winner!")
-            # race_on = False
-            return
+            race_on = False
+            break
