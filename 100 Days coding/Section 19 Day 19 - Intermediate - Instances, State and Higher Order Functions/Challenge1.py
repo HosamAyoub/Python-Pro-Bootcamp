@@ -15,4 +15,5 @@ def rotate_clock_wise():
 screen.listen()
 screen.onkey(key = "w", fun = move_forward)
 screen.onkey(key = "s", fun = move_backward)
+screen.onkey(key = "d", fun = rotate_clock_wise)
 screen.exitonclick()
