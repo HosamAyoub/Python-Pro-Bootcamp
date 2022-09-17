@@ -4,7 +4,7 @@ from random import randint
 colors = ["purple", "blue", "orange", "red"]
 y_positions = [150, 50, -50, -150]
 turtles = []
-turtles_names = ["Donatello", "Leonardo", "Michelangelo", "Raphael"]
+turtles_names = ["donatello", "leonardo", "michelangelo", "raphael"]
 screen = Screen()
 screen.setup(width = 500, height = 450)
 user_bet = ""
