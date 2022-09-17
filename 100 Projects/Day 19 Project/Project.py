@@ -19,8 +19,8 @@ for turtle_index in range(4):
     new_turtle.goto(x = -235, y = y_positions[turtle_index])
     turtles.append(new_turtle)
 
-while True:
-
+race_on = True
+while race_on:
     for turtle in turtles:
         turtle.forward(randint(0, 10))
         if turtle.xcor() >= 235:
@@ -28,6 +28,5 @@ while True:
                 print(f"You've won! the {user_bet.capitalize()} turtle is the winner!")
             else:
                 print(f"You've lost! the {turtles_names[turtles.index(turtle)].capitalize()} turtle is the winner!")
-            break
-
-screen.exitonclick()
+            # race_on = False
+            return
