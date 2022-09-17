@@ -1,21 +1,5 @@
 from turtle import Turtle, Screen
 
-donatello = Turtle(shape = "turtle")
-donatello.penup()
-donatello.color("purple")
-
-leonardo = Turtle(shape = "turtle")
-leonardo.penup()
-leonardo.color("blue")
-
-michelangelo = Turtle(shape = "turtle")
-michelangelo.penup()
-michelangelo.color("orange")
-
-raphael = Turtle(shape = "turtle")
-raphael.penup()
-raphael.color("red")
-
 colors = ["purple", "blue", "orange", "red"]
 y_positions = [150, 50, -50, -150]
 turtles = []
