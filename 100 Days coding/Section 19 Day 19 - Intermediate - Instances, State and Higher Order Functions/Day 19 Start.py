@@ -1,6 +1,6 @@
-from turtle import Turtl, Screen
+from turtle import Turtle, Screen
 
-tom = turtle()
+tom = Turtle()
 
 screen = Screen()
 screen.exitonclick()
