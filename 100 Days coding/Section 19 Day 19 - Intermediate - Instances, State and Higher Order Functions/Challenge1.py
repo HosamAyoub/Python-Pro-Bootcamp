@@ -7,7 +7,7 @@ def move_forward():
     tom.forward(10)
 
 def move_backward():
-    tom.bakcward(10)
+    tom.backward(10)
 
 screen.listen()
 screen.onkey(key = "w", fun = move_forward)
