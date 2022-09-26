@@ -15,3 +15,12 @@ screen.onkey(right_paddle.up, "Up")
 screen.onkey(right_paddle.down, "Down")
 screen.onkey(left_paddle.up, "w")
 screen.onkey(left_paddle.down, "s")
+
+ball = Ball()
+
+while True:
+    screen.update()
+    ball.move_ball()
+    time.sleep(0.05)
+
+screen.exitonclick()
