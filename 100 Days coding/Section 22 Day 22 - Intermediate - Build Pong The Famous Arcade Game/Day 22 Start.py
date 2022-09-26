@@ -1,5 +1,7 @@
 from turtle import Screen
-
+from paddle import Paddle
+from ball import Ball
+import time
 
 screen = Screen()
 screen.tracer(0)
@@ -21,6 +23,7 @@ ball = Ball()
 while True:
     screen.update()
     ball.move_ball()
-    time.sleep(0.05)
+    ball.collision_with_wall()
+    time.sleep(0.07)
 
 screen.exitonclick()
