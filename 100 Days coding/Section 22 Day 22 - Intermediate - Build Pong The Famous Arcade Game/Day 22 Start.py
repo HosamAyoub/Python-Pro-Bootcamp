@@ -7,7 +7,8 @@ screen.bgcolor('black')
 screen.title('Ping Pong')
 screen.setup(width=800, height=600)
 
-
+right_paddle = Paddle((350, 0))
+left_paddle = Paddle((-350, 0))
 
 screen.listen()
 screen.onkey(right_paddle.up, "Up")
