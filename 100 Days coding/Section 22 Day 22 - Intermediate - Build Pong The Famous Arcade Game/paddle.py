@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 NORTH = 90
-STEP = 10
+STEP = 20
 
 class Paddle(Turtle):
     def __init__(self, position):
