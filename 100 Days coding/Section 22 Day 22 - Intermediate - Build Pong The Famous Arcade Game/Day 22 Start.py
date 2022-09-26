@@ -9,8 +9,8 @@ screen.bgcolor('black')
 screen.title('Ping Pong')
 screen.setup(width=800, height=600)
 
-right_paddle = Paddle((350, 0))
-left_paddle = Paddle((-350, 0))
+right_paddle = Paddle((370, 0))
+left_paddle = Paddle((-370, 0))
 
 screen.listen()
 screen.onkeypress(right_paddle.up, "Up")
@@ -28,10 +28,13 @@ while True:
     if -280 > ball.ycor() or ball.ycor() > 280:
         ball.y_bounce()
     #Detect collision with paddle
-    if (ball.distance(right_paddle) < 50 and ball.xcor() > 325) or (ball.distance(left_paddle) < 50 and ball.xcor() < -325):
+    if (ball.distance(right_paddle) < 50 and ball.xcor() > 345) or (ball.distance(left_paddle) < 50 and ball.xcor() < -345):
         ball.x_bounce()
-    #Detect when the paddle misses
-    if ball.xcor() > 420 or ball.xcor() < -420:
+    #Detect when the R paddle misses
+    if ball.xcor() > 420:
+        ball.reset()
+    #Detect when the R paddle misses
+    if ball.xcor() < -420:
         ball.reset()
 
 screen.exitonclick()
