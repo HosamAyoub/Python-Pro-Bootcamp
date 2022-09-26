@@ -7,20 +7,25 @@ class Ball(Turtle):
         super().__init__()
         self.x_move = 10
         self.y_move = 10
-        self.create_ball()
+        self.create()
     
-    def create_ball(self):
+    def create(self):
         self.penup()
         self.shape('circle')
         self.color('White')
-        # self.seth(randint(0, 360))
     
-    def move_ball(self):
-        # self.fd(20)
+    def move(self):
+        
         new_x = self.xcor() + self.x_move
         new_y = self.ycor() + self.y_move
         self.goto((new_x, new_y))
         
-    def collision_with_wall(self):
-        if -280 > self.ycor() or self.ycor() > 280:
-            self.y_move = -10
+    def y_bounce(self):
+        self.y_move *= -1
+    
+    def x_bounce(self):
+        self.x_move *= -1
+    
+    def reset(self):
+        self.goto((0, 0))
+        self.x_bounce()
