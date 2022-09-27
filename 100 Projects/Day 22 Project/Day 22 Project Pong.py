@@ -41,5 +41,3 @@ while True:
     if ball.xcor() < -420:
         scoreboard.r_point()
         ball.reset()
-
-screen.exitonclick()
