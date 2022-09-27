@@ -2,7 +2,7 @@ from random import randint
 from secrets import choice
 from turtle import Turtle
 
-COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
+COLORS = ["red", "orange", "yellow", "dark green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 4
 MOVE_INCREMENT = 2
 
