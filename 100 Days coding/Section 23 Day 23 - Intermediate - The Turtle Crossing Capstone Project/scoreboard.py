@@ -8,6 +8,7 @@ class Scoreboard(Turtle):
         super().__init__()
         self.penup()
         self.hideturtle()
+        self.color('white')
         self.goto(-290, 260)
         self.level = 1
         self.update_level()
