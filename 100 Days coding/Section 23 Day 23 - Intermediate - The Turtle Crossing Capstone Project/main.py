@@ -10,6 +10,8 @@ screen.tracer(0)
 
 player = Player()
 scoreboard = Scoreboard()
+car_manager = CarManager()
+car_manager.create()
 
 screen.listen()
 screen.onkeypress(player.up, "Up")
@@ -17,6 +19,10 @@ screen.onkeypress(player.up, "Up")
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
+    for car in car_manager.turtles:
+        if player.distance(car) < 28:
+            game_is_on = False
     if player.finish():
         scoreboard.next_level()
+    car_manager.move(scoreboard.level)
     screen.update()
