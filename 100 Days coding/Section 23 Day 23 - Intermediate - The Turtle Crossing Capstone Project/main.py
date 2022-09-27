@@ -5,6 +5,7 @@ from car_manager import CarManager
 from scoreboard import Scoreboard
 
 screen = Screen()
+screen.title('Crossing Capstone')
 screen.setup(width=600, height=600)
 screen.tracer(0)
 
@@ -20,9 +21,13 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     for car in car_manager.turtles:
-        if player.distance(car) < 28:
+        if player.distance(car) < 20:
+            scoreboard.game_over()
             game_is_on = False
     if player.finish():
-        scoreboard.next_level()
-    car_manager.move(scoreboard.level)
+        scoreboard.level_up()
+        car_manager.speed_up()
+    car_manager.move()
     screen.update()
+
+screen.exitonclick()
