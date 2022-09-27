@@ -1,13 +1,16 @@
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import ScoreBoard
 import time
 
 screen = Screen()
 screen.tracer(0)
 screen.bgcolor('black')
-screen.title('Ping Pong')
+screen.title('Pong')
 screen.setup(width=800, height=600)
+
+scoreboard = ScoreBoard()
 
 right_paddle = Paddle((370, 0))
 left_paddle = Paddle((-370, 0))
@@ -21,7 +24,7 @@ screen.onkeypress(left_paddle.down, "s")
 ball = Ball()
 
 while True:
-    time.sleep(0.09)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
     #Detect collision with wall
@@ -32,9 +35,11 @@ while True:
         ball.x_bounce()
     #Detect when the R paddle misses
     if ball.xcor() > 420:
+        scoreboard.l_point()
         ball.reset()
     #Detect when the R paddle misses
     if ball.xcor() < -420:
+        scoreboard.r_point()
         ball.reset()
 
 screen.exitonclick()
