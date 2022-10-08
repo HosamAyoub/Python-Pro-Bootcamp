@@ -1,10 +1,10 @@
-# with open ('weather_data.csv') as file:
+# with open (r'Python/Hundred_Days_of_Code/Day 25 - Intermediate - Working with CSV Data and the Pandas Library/weather_data.csv') as file:
 #     data = file.readlines()  
 #     print(data)
 
 # import csv
 
-# with open ('weather_data.csv') as file:
+# with open (r'Python/Hundred_Days_of_Code/Day 25 - Intermediate - Working with CSV Data and the Pandas Library/weather_data.csv') as file:
 #     data = csv.reader(file)
 #     temperatures = []
 #     for row in data:
@@ -13,46 +13,60 @@
 #         print(row)
 #     print(temperatures)
 
+# import pandas
+
+# # This is a data frame
+# data = pandas.read_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\weather_data.csv')
+# print(data)
+# print()
+# # data['temp'] is a series
+# print(data['temp'])
+# print()
+# # converting data frame to a dictionary
+# data_dict = data.to_dict()
+# print(data_dict)
+# print()
+# # converting series to a list
+# data_list = data['temp'].to_list()
+# print(data_list)
+
+# # get average of the temps
+# print(f'{sum(data_list)/len(data_list):.2f}')
+# print(f'{data["temp"].mean():.2f}')
+# print(data["temp"].max())
+
+# # get data from column
+# print(data['day'])
+# print(data.day)
+
+# # get data from row
+# print(data[data.day == 'Tuesday'])
+
+# # get the row of data which has the maximum temperature of the week
+# print(data[data.temp == data.temp.max()])
+
+# hot_day = data[data.temp == data.temp.max()]
+# print((hot_day.temp * 9/5) + 32)
+
+# # create data frame from scratch
+# new_dict = {
+#     "students": ["Amy", "James", "Angela"],
+#     "scores": [76, 32, 54]
+# }
+# data = pandas.DataFrame(new_dict)
+# print(data)
+# data.to_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\new_data.csv')
+
 import pandas
 
-# This is a data frame
-data = pandas.read_csv('weather_data.csv')
-print(data)
-print()
-# data['temp'] is a series
-print(data['temp'])
-print()
-# converting data frame to a dictionary
-data_dict = data.to_dict()
-print(data_dict)
-print()
-# converting series to a list
-data_list = data['temp'].to_list()
-print(data_list)
+data = pandas.read_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv')
+data_list = data['Primary Fur Color'].dropna().to_list()
+data_set = set(data_list)
+colors = {}
+for color in data_set:
+    colors[color] = data_list.count(color)
+colors = dict(sorted(colors.items(), reverse= True))
 
-# get average of the temps
-print(f'{sum(data_list)/len(data_list):.2f}')
-print(f'{data["temp"].mean():.2f}')
-print(data["temp"].max())
-
-# get data from column
-print(data['day'])
-print(data.day)
-
-# get data from row
-print(data[data.day == 'Tuesday'])
-
-# get the row of data which has the maximum temperature of the week
-print(data[data.temp == data.temp.max()])
-
-hot_day = data[data.temp == data.temp.max()]
-print((hot_day.temp * 9/5) + 32)
-
-# create data frame from scratch
-new_dict = {
-    "students": ["Amy", "James", "Angela"],
-    "scores": [76, 32, 54]
-}
-data = pandas.DataFrame(new_dict)
-print(data)
-data.to_csv('new_data.csv')
+data_colors = {'Fur Color': list(colors.keys()), 'Count': list(colors.values())}
+data = pandas.DataFrame(data_colors)
+data.to_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\colors.csv')
