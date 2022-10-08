@@ -1,10 +1,10 @@
-# with open (r'Python/Hundred_Days_of_Code/Day 25 - Intermediate - Working with CSV Data and the Pandas Library/weather_data.csv') as file:
+# with open ('weather_data.csv') as file:
 #     data = file.readlines()  
 #     print(data)
 
 # import csv
 
-# with open (r'Python/Hundred_Days_of_Code/Day 25 - Intermediate - Working with CSV Data and the Pandas Library/weather_data.csv') as file:
+# with open ('weather_data.csv') as file:
 #     data = csv.reader(file)
 #     temperatures = []
 #     for row in data:
@@ -16,7 +16,7 @@
 # import pandas
 
 # # This is a data frame
-# data = pandas.read_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\weather_data.csv')
+# data = pandas.read_csv('weather_data.csv')
 # print(data)
 # print()
 # # data['temp'] is a series
@@ -55,11 +55,11 @@
 # }
 # data = pandas.DataFrame(new_dict)
 # print(data)
-# data.to_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\new_data.csv')
+# data.to_csv('new_data.csv')
 
 import pandas
 
-data = pandas.read_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv')
+data = pandas.read_csv('2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv')
 data_list = data['Primary Fur Color'].dropna().to_list()
 data_set = set(data_list)
 colors = {}
@@ -69,4 +69,4 @@ colors = dict(sorted(colors.items(), reverse= True))
 
 data_colors = {'Fur Color': list(colors.keys()), 'Count': list(colors.values())}
 data = pandas.DataFrame(data_colors)
-data.to_csv(r'Python\Hundred_Days_of_Code\Day 25 - Intermediate - Working with CSV Data and the Pandas Library\colors.csv')
+data.to_csv('colors.csv')
